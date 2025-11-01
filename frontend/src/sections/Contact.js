@@ -4,10 +4,34 @@ import { Mail } from 'lucide-react';
 
 const copyEmail = async (text) => {
   try {
-    await navigator.clipboard.writeText(text);
-    toast.success('Email copied to clipboard');
-  } catch {
-    toast.error('Failed to copy email');
+    // Check if clipboard API is available
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(text);
+      toast.success('Email copied to clipboard');
+    } else {
+      // Fallback for browsers without clipboard API
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        textArea.remove();
+        toast.success('Email copied to clipboard');
+      } catch (err) {
+        textArea.remove();
+        toast.error('Failed to copy email');
+      }
+    }
+  } catch (err) {
+    // Final fallback - show email for manual copy
+    toast.info('Email: spencer@yupl.com', {
+      duration: 5000,
+    });
   }
 };
 
