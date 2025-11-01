@@ -1,10 +1,10 @@
 [
   {
     "content": "Create blog page with dynamic routing for blog posts",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Verify Emergent badge is hidden and image size is correct",
-    "status": "pending"
+    "status": "completed"
   }
 ]
