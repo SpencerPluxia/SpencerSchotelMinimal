@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Setup design tokens in index.css with Telegram-inspired color palette",
+    "status": "pending"
+  },
+  {
+    "content": "Add Google Fonts (Space Grotesk + Inter) and Font Awesome CDN to index.html",
+    "status": "pending"
+  },
+  {
+    "content": "Create Hero section component with portrait, name, tagline, and CTA",
+    "status": "pending"
+  },
+  {
+    "content": "Create About section component with bio paragraphs",
+    "status": "pending"
+  },
+  {
+    "content": "Create BlogPreview section with 3 sample blog posts in card grid",
+    "status": "pending"
+  },
+  {
+    "content": "Create Contact section with email and social icons (X, Telegram, LinkedIn)",
+    "status": "pending"
+  },
+  {
+    "content": "Update App.js to integrate all sections and add Toaster",
+    "status": "pending"
+  },
+  {
+    "content": "Add placeholder hero image to public folder",
+    "status": "pending"
+  },
+  {
+    "content": "Verify frontend compiles without errors using esbuild",
+    "status": "pending"
+  },
+  {
+    "content": "Test UI with screenshot tool and validate design adherence",
+    "status": "pending"
+  }
+]
