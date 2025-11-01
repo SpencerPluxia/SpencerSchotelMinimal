@@ -1,7 +1,7 @@
 [
   {
     "content": "Setup design tokens in index.css with Telegram-inspired color palette",
-    "status": "pending"
+    "status": "in_progress"
   },
   {
     "content": "Add Google Fonts (Space Grotesk + Inter) and Font Awesome CDN to index.html",
