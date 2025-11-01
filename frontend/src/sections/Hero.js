@@ -3,6 +3,14 @@ import { Button } from '../components/ui/button';
 import { Mail } from 'lucide-react';
 
 export const Hero = () => {
+  const scrollToBlog = (e) => {
+    e.preventDefault();
+    const blogSection = document.getElementById('blog');
+    if (blogSection) {
+      blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section id="hero" className="pt-20 pb-16 lg:pt-24 lg:pb-20" data-testid="hero-section">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -28,7 +36,7 @@ export const Hero = () => {
           </p>
           <div className="flex items-center gap-4 flex-wrap">
             <Button 
-              className="bg-[hsl(var(--primary))] text-white hover:bg-[hsl(var(--primary))]/90 transition-colors" 
+              className="bg-[hsl(var(--primary))] text-white hover:bg-[hsl(var(--primary))]/90 transition-colors h-11" 
               data-testid="hero-primary-cta-button" 
               asChild
             >
@@ -39,6 +47,7 @@ export const Hero = () => {
             </Button>
             <a 
               href="#blog" 
+              onClick={scrollToBlog}
               className="text-[hsl(var(--primary))] underline underline-offset-4 hover:text-[hsl(var(--primary))]/90 transition-colors" 
               data-testid="hero-secondary-cta-link"
             >
