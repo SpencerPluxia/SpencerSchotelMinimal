@@ -9,10 +9,10 @@
   },
   {
     "content": "Fix 'Read the blog' scroll behavior to reach exact blog section",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Increase CTA button height for better mobile touch target (44px minimum)",
-    "status": "pending"
+    "status": "completed"
   }
 ]
