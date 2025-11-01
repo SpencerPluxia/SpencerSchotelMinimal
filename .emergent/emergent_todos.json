@@ -33,10 +33,10 @@
   },
   {
     "content": "Verify frontend compiles without errors using esbuild",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Test UI with screenshot tool and validate design adherence",
-    "status": "pending"
+    "status": "in_progress"
   }
 ]
