@@ -1,18 +1,18 @@
 [
   {
     "content": "Call testing agent for comprehensive frontend validation",
+    "status": "completed"
+  },
+  {
+    "content": "Fix email copy functionality in Contact.js",
+    "status": "in_progress"
+  },
+  {
+    "content": "Fix 'Read the blog' scroll behavior to reach exact blog section",
     "status": "pending"
   },
   {
-    "content": "Fix all reported bugs from testing agent (high to low priority)",
-    "status": "pending"
-  },
-  {
-    "content": "Verify keyboard navigation and accessibility",
-    "status": "pending"
-  },
-  {
-    "content": "Validate responsive behavior across all breakpoints",
+    "content": "Increase CTA button height for better mobile touch target (44px minimum)",
     "status": "pending"
   }
 ]
