@@ -1,18 +1,10 @@
 [
   {
-    "content": "Call testing agent for comprehensive frontend validation",
-    "status": "completed"
+    "content": "Create blog page with dynamic routing for blog posts",
+    "status": "in_progress"
   },
   {
-    "content": "Fix email copy functionality in Contact.js",
-    "status": "completed"
-  },
-  {
-    "content": "Fix 'Read the blog' scroll behavior to reach exact blog section",
-    "status": "completed"
-  },
-  {
-    "content": "Increase CTA button height for better mobile touch target (44px minimum)",
-    "status": "completed"
+    "content": "Verify Emergent badge is hidden and image size is correct",
+    "status": "pending"
   }
 ]
