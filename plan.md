@@ -9,6 +9,7 @@ Ultra-minimalistic personal website for Spencer Schotel (YUPL.com owner & ethica
 - LinkedIn: https://uk.linkedin.com/in/spencer-schotel
 - Social icons: X/Twitter, Telegram, LinkedIn
 - Professional, simple, no complex designs
+- Individual blog post pages with full content
 
 **Design System:**
 - **Color Palette**: Telegram-inspired cyan accent (#229ED9 / hsl(198 72% 49%)) with clean neutrals
@@ -29,7 +30,7 @@ Ultra-minimalistic personal website for Spencer Schotel (YUPL.com owner & ethica
 3. ✅ Created section components:
    - Hero (with portrait image, name, tagline, CTA button)
    - About (bio paragraphs with YUPL.com link)
-   - BlogPreview (3 sample blog posts in card grid with hover effects)
+   - BlogPreview (3 blog posts in card grid with hover effects)
    - Contact (email copy button + social icons for X, Telegram, LinkedIn)
 4. ✅ Updated App.js to integrate all sections with Toaster
 5. ✅ Added placeholder hero image (1.8MB professional portrait)
@@ -99,16 +100,67 @@ Ultra-minimalistic personal website for Spencer Schotel (YUPL.com owner & ethica
 
 ---
 
-## Phase 3: Polish & Final Review (Status: Ready for User Input)
+## Phase 3: User-Requested Enhancements (Status: ✅ COMPLETED)
 
-**Objective**: Final refinements and user acceptance
+**Objective**: Implement additional features and refinements based on user feedback
+
+### Completed Tasks:
+1. ✅ **Reduced hero image size**:
+   - Changed from full-width to max-w-sm (384px max width)
+   - Added mx-auto centering on mobile, lg:mx-0 on desktop
+   - Final width: 372px (more proportional and less dominant)
+
+2. ✅ **Created individual blog post pages**:
+   - Built `/app/frontend/src/pages/BlogPost.js` with dynamic routing
+   - Implemented React Router with `/blog/:slug` route pattern
+   - Added 3 full blog posts with real content:
+     - "Defensive by Design: Building for the Unexpected"
+     - "Threat Modeling That Teams Actually Use"
+     - "From Finding Vulns to Fixing Culture"
+   - Each post includes:
+     - Full article content with headings and paragraphs
+     - Formatted date display
+     - "Back to Home" navigation (top and bottom)
+     - Clean, readable typography
+     - Proper semantic HTML structure
+
+3. ✅ **Updated blog card links**:
+   - Changed from hash links (#blog/slug) to proper routes (/blog/slug)
+   - Updated slugs to match full titles for SEO-friendly URLs
+   - All 3 blog cards now navigate to actual pages
+
+4. ✅ **Removed Emergent badge**:
+   - Added CSS rule to hide #emergent-badge element
+   - Badge no longer visible on any page
+   - Maintains clean, professional appearance
+
+5. ✅ **Verified all changes**:
+   - Hero image displays at correct smaller size (372px)
+   - Blog post navigation working perfectly
+   - Blog post pages render with full content
+   - Back navigation returns to homepage
+   - Emergent badge successfully hidden
+   - All features tested and functional
+
+### New Deliverables:
+- `/app/frontend/src/pages/BlogPost.js` - Individual blog post page component with dynamic routing
+- Updated `/app/frontend/src/App.js` - Added React Router with blog post route
+- Updated `/app/frontend/src/sections/Hero.js` - Smaller hero image (max-w-sm)
+- Updated `/app/frontend/src/sections/BlogPreview.js` - Proper blog post links
+- Updated `/app/frontend/src/index.css` - Hidden Emergent badge
+
+---
+
+## Phase 4: Content & Polish (Status: Ready for User Input)
+
+**Objective**: Final content updates and optional enhancements
 
 ### Remaining Tasks:
 1. **User Content Updates** (Requires user input):
    - Replace placeholder hero image with Spencer's actual photo
    - Add real X/Twitter handle (currently: https://x.com/)
    - Add real Telegram handle (currently: https://t.me/)
-   - Update blog posts with real content (currently using sample titles/dates)
+   - Optional: Update or add more blog posts with real content
 
 2. **Performance Optimization** (Optional):
    - Optimize hero.jpg image size (currently 1.8MB - consider WebP format or compression)
@@ -119,6 +171,7 @@ Ultra-minimalistic personal website for Spencer Schotel (YUPL.com owner & ethica
    - Add meta description for better SEO
    - Add Open Graph tags for social sharing
    - Add favicon
+   - Add structured data for blog posts
 
 4. **Final Verification**:
    - User review and feedback
@@ -154,18 +207,28 @@ Ultra-minimalistic personal website for Spencer Schotel (YUPL.com owner & ethica
 - ✅ Accessibility compliant (44px touch targets, keyboard navigation, focus states)
 - ✅ Toast notifications working (Sonner)
 - ✅ All bugs from testing agent resolved
+- ✅ **Hero image optimized to smaller size (372px)**
+- ✅ **Individual blog post pages with full content**
+- ✅ **Dynamic routing for blog posts (/blog/:slug)**
+- ✅ **Emergent badge hidden**
+- ✅ **Back to home navigation on blog pages**
 
 **📝 Pending User Input:**
 - Spencer's actual portrait photo (to replace placeholder)
 - X/Twitter handle
 - Telegram handle
-- Real blog post content (titles, dates, links)
+- Optional: Additional blog posts or content updates
 
 **🎯 Production Ready:**
-The website is fully functional and ready for production deployment. All core features are working, design guidelines are followed, and accessibility standards are met. The only remaining items are content updates that require user input.
+The website is fully functional and ready for production deployment. All core features are working, design guidelines are followed, accessibility standards are met, and all user-requested enhancements have been implemented. The only remaining items are content updates that require user input.
 
 **🔗 Preview URL:**
 https://ethical-code-1.preview.emergentagent.com
+
+**🔗 Sample Blog Post URLs:**
+- https://ethical-code-1.preview.emergentagent.com/blog/defensive-by-design-building-for-the-unexpected
+- https://ethical-code-1.preview.emergentagent.com/blog/threat-modeling-that-teams-actually-use
+- https://ethical-code-1.preview.emergentagent.com/blog/from-finding-vulns-to-fixing-culture
 
 ---
 
@@ -173,6 +236,7 @@ https://ethical-code-1.preview.emergentagent.com
 
 **Frontend Stack:**
 - React 19.0.0
+- React Router DOM 7.5.1
 - Tailwind CSS 3.4.17
 - Shadcn/UI components
 - Sonner for toast notifications
@@ -180,13 +244,24 @@ https://ethical-code-1.preview.emergentagent.com
 - Font Awesome 6.5.1 for brand icons
 
 **Key Files:**
-- `/app/frontend/src/App.js` - Main application
-- `/app/frontend/src/sections/Hero.js` - Hero section with smooth scroll
+- `/app/frontend/src/App.js` - Main application with React Router
+- `/app/frontend/src/pages/BlogPost.js` - Individual blog post page component
+- `/app/frontend/src/sections/Hero.js` - Hero section with optimized image size
 - `/app/frontend/src/sections/About.js` - About section
-- `/app/frontend/src/sections/BlogPreview.js` - Blog preview cards
+- `/app/frontend/src/sections/BlogPreview.js` - Blog preview cards with proper links
 - `/app/frontend/src/sections/Contact.js` - Contact with enhanced email copy
-- `/app/frontend/src/index.css` - Design tokens and color palette
+- `/app/frontend/src/index.css` - Design tokens, color palette, and badge hiding
 - `/app/frontend/public/index.html` - HTML with fonts and icons CDN
+
+**Routing Structure:**
+- `/` - Homepage (Hero, About, Blog Preview, Contact)
+- `/blog/:slug` - Individual blog post pages with dynamic content
+
+**Blog Post Data:**
+- Stored in `/app/frontend/src/pages/BlogPost.js` as a JavaScript object
+- 3 full blog posts with titles, dates, and complete content
+- SEO-friendly slugs in URLs
+- Easy to extend with more posts
 
 **Design Compliance:**
 - ✅ Telegram-inspired color palette (cyan #229ED9 + neutrals)
@@ -196,8 +271,36 @@ https://ethical-code-1.preview.emergentagent.com
 - ✅ Subtle hover effects only
 - ✅ No complex gradients or animations
 - ✅ Accessibility compliant (WCAG 2.1 AA)
+- ✅ Optimized hero image size (372px width)
+- ✅ Clean UI without branding badges
 
 **Browser Compatibility:**
 - Modern browsers (Chrome, Firefox, Safari, Edge)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 - Responsive breakpoints: 375px (mobile), 768px (tablet), 1024px (desktop), 1920px (wide)
+
+---
+
+## Change Log
+
+### Latest Updates (Phase 3 - User-Requested Enhancements)
+- **Hero Image**: Reduced size from full-width to max-w-sm (372px), centered on mobile
+- **Blog Posts**: Created individual blog post pages with React Router dynamic routing
+- **Blog Links**: Updated all blog card links to navigate to actual pages (/blog/:slug)
+- **Emergent Badge**: Hidden via CSS for clean, professional appearance
+- **Blog Content**: Added 3 full blog posts with real security and ethical hacking content
+- **Navigation**: Implemented "Back to Home" links on blog post pages
+
+### Previous Updates (Phase 2 - Testing & Bug Fixes)
+- **Email Copy**: Enhanced with 3-tier fallback mechanism
+- **Scroll Behavior**: Smooth scroll to blog section with exact positioning
+- **Button Accessibility**: Increased CTA button height to 44px for mobile touch targets
+- **Testing**: Comprehensive testing completed with 95% success rate
+- **Bug Fixes**: All reported issues resolved and verified
+
+### Initial Implementation (Phase 1 - MVP)
+- **Core Sections**: Hero, About, Blog Preview, Contact
+- **Design System**: Telegram-inspired color palette, Space Grotesk + Inter typography
+- **Responsive Layout**: Mobile-first design tested across all breakpoints
+- **Accessibility**: Full keyboard navigation, focus states, ARIA labels
+- **Components**: Shadcn/UI integration throughout
