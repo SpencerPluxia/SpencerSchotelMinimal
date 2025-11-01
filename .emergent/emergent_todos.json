@@ -29,11 +29,11 @@
   },
   {
     "content": "Add placeholder hero image to public folder",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Verify frontend compiles without errors using esbuild",
-    "status": "pending"
+    "status": "in_progress"
   },
   {
     "content": "Test UI with screenshot tool and validate design adherence",
