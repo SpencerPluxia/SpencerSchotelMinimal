@@ -1,42 +1,18 @@
 [
   {
-    "content": "Setup design tokens in index.css with Telegram-inspired color palette",
-    "status": "completed"
+    "content": "Call testing agent for comprehensive frontend validation",
+    "status": "pending"
   },
   {
-    "content": "Add Google Fonts (Space Grotesk + Inter) and Font Awesome CDN to index.html",
-    "status": "completed"
+    "content": "Fix all reported bugs from testing agent (high to low priority)",
+    "status": "pending"
   },
   {
-    "content": "Create Hero section component with portrait, name, tagline, and CTA",
-    "status": "completed"
+    "content": "Verify keyboard navigation and accessibility",
+    "status": "pending"
   },
   {
-    "content": "Create About section component with bio paragraphs",
-    "status": "completed"
-  },
-  {
-    "content": "Create BlogPreview section with 3 sample blog posts in card grid",
-    "status": "completed"
-  },
-  {
-    "content": "Create Contact section with email and social icons (X, Telegram, LinkedIn)",
-    "status": "completed"
-  },
-  {
-    "content": "Update App.js to integrate all sections and add Toaster",
-    "status": "completed"
-  },
-  {
-    "content": "Add placeholder hero image to public folder",
-    "status": "completed"
-  },
-  {
-    "content": "Verify frontend compiles without errors using esbuild",
-    "status": "completed"
-  },
-  {
-    "content": "Test UI with screenshot tool and validate design adherence",
-    "status": "completed"
+    "content": "Validate responsive behavior across all breakpoints",
+    "status": "pending"
   }
 ]
