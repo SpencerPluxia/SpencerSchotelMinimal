@@ -6,19 +6,19 @@ const posts = [
     id: '1', 
     title: 'Defensive by Design: Building for the Unexpected', 
     date: '2025-01-09',
-    slug: 'defensive-by-design'
+    slug: 'defensive-by-design-building-for-the-unexpected'
   },
   { 
     id: '2', 
     title: 'Threat Modeling That Teams Actually Use', 
     date: '2025-01-02',
-    slug: 'threat-modeling-teams'
+    slug: 'threat-modeling-that-teams-actually-use'
   },
   { 
     id: '3', 
     title: 'From Finding Vulns to Fixing Culture', 
     date: '2024-12-21',
-    slug: 'finding-vulns-fixing-culture'
+    slug: 'from-finding-vulns-to-fixing-culture'
   },
 ];
 
