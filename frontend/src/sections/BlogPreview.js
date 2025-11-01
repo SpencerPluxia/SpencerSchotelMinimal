@@ -36,7 +36,7 @@ export const BlogPreview = () => {
           {posts.map((post) => (
             <a 
               key={post.id} 
-              href={`#blog/${post.slug}`}
+              href={`/blog/${post.slug}`}
               data-testid={`blog-card-link-${post.id}`}
               aria-label={post.title}
               className="block"
