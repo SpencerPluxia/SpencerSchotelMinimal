@@ -59,7 +59,7 @@ export const Hero = () => {
           <img 
             alt="Spencer Schotel portrait" 
             src="/hero.jpg" 
-            className="w-full rounded-lg shadow-sm ring-1 ring-black/5 object-cover" 
+            className="w-full max-w-sm mx-auto lg:mx-0 rounded-lg shadow-sm ring-1 ring-black/5 object-cover" 
             data-testid="hero-image" 
           />
         </div>
